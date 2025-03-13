@@ -13,19 +13,12 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
             <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle}>
-                      Home
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
+              <ul className="nav-list flex flex-wrap justify-center gap-4 p-4 md:p-6 lg:p-8">
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Detlef Zeiler</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      <li className="row-span-3">
+                    <div className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[800px] lg:grid-cols-3">
+                      <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -39,8 +32,8 @@ export function Header() {
                             </p>
                           </Link>
                         </NavigationMenuLink>
-                      </li>
-                      <li>
+                      </div>
+                      <div>
                         <NavigationMenuLink asChild>
                           <Link href="/detlef/projekte/heidelberg-im-mittelalter" legacyBehavior passHref>
                             <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
@@ -51,8 +44,8 @@ export function Header() {
                             </NavigationMenuLink>
                           </Link>
                         </NavigationMenuLink>
-                      </li>
-                      <li>
+                      </div>
+                      <div>
                         <Link href="/detlef/projekte/neuenheim" legacyBehavior passHref>
                           <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Neuenheim</div>
@@ -61,8 +54,8 @@ export function Header() {
                             </p>
                           </NavigationMenuLink>
                         </Link>
-                      </li>
-                      <li>
+                      </div>
+                      <div>
                         <Link href="/detlef/medien" legacyBehavior passHref>
                           <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Medien</div>
@@ -71,15 +64,15 @@ export function Header() {
                             </p>
                           </NavigationMenuLink>
                         </Link>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Julian Zeiler</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
-                      <li className="row-span-3">
+                    <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -93,8 +86,8 @@ export function Header() {
                             </p>
                           </Link>
                         </NavigationMenuLink>
-                      </li>
-                      <li>
+                      </div>
+                      <div>
                         <Link href="/julian/artikel/auswirkungen-von-ideologien-der-open-source-lizenzen" legacyBehavior passHref>
                           <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Open Source Lizenzen</div>
@@ -103,11 +96,11 @@ export function Header() {
                             </p>
                           </NavigationMenuLink>
                         </Link>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-              </NavigationMenuList>
+              </ul>
             </NavigationMenu>
           </nav>
         </div>
