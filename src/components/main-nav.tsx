@@ -107,6 +107,16 @@ export function MainNav() {
                 </NavigationMenuLink>
               </li>
               <li className="col-span-1">
+                <Link href="/detlef/deutsch" legacyBehavior passHref>
+                  <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700">
+                    <div className="text-sm font-medium leading-none">Deutsch</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-500 dark:text-slate-400">
+                      Unterrichtsmaterialien und Textbeispiele.
+                    </p>
+                  </NavigationMenuLink>
+                </Link>
+              </li>
+              <li className="col-span-1">
                 <Link href="/detlef/geschichte/alexander-von-humboldts-sdamerikareise" legacyBehavior passHref>
                   <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700">
                     <div className="text-sm font-medium leading-none">Alexander von Humboldt</div>
@@ -180,6 +190,31 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <NavigationMenuTrigger>Geschichte</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <ListItem
+                title="Geschichte"
+                href="/detlef/geschichte"
+              >
+                Übersicht über Geschichte-Materialien.
+              </ListItem>
+              <ListItem
+                title="Gerüchte"
+                href="/detlef/geschichte/gerchte"
+              >
+                Analyse von Gerüchten als soziales Phänomen.
+              </ListItem>
+              <ListItem
+                title="Sind wir nur Tiere?"
+                href="/detlef/geschichte/sind-wir-nur-tiere"
+              >
+                Philosophische Betrachtung zum Unterschied zwischen Mensch und Tier.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Heidelberg im Mittelalter</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -192,6 +227,227 @@ export function MainNav() {
                   {component.description}
                 </ListItem>
               ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Der Heiligenberg</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ListItem
+                title="Übersicht"
+                href="/detlef/projekte/heiligenberg"
+              >
+                Geschichte und Bedeutung des Heiligenbergs bei Heidelberg.
+              </ListItem>
+              <ListItem
+                title="Die Geschichte des Heiligenbergs"
+                href="/detlef/projekte/heiligenberg/geschichte"
+              >
+                Historische Entwicklung und archäologische Funde am Heiligenberg.
+              </ListItem>
+              <ListItem
+                title="Der unheimliche Berg"
+                href="/detlef/projekte/heiligenberg/der-unheimliche-berg"
+              >
+                Mythen, Legenden und Sagen rund um den Heiligenberg.
+              </ListItem>
+              <ListItem
+                title="Unser Projekt"
+                href="/detlef/projekte/heiligenberg/projekt"
+              >
+                Schulprojekt zur Erforschung des Heiligenbergs und seiner Geschichte.
+              </ListItem>
+              <ListItem
+                title="MOPÄD - Mobile Pädagogen"
+                href="/detlef/projekte/heiligenberg/mopaed"
+              >
+                Mobile Pädagogen und ihre Arbeit am Heiligenberg-Projekt.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Die Elsenz und der Kraichgau</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ListItem
+                title="Übersicht"
+                href="/detlef/projekte/die-elsenz-und-der-kraichgau"
+              >
+                Erkundung der Region zwischen Odenwald und Schwarzwald.
+              </ListItem>
+              <ListItem
+                title="Geographische Lage"
+                href="/detlef/projekte/die-elsenz-und-der-kraichgau/geographische-lage"
+              >
+                Natürliche Merkmale und geologische Besonderheiten der Region.
+              </ListItem>
+              <ListItem
+                title="Kultur / Religion"
+                href="/detlef/projekte/die-elsenz-und-der-kraichgau/kultur-religion"
+              >
+                Kulturelle und religiöse Prägung der Bevölkerung im Kraichgau.
+              </ListItem>
+              <ListItem
+                title="Geschichte und Politik"
+                href="/detlef/projekte/die-elsenz-und-der-kraichgau/geschichte-und-politik"
+              >
+                Historische Entwicklung und politische Ereignisse der Region.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Neuenheim</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ListItem
+                title="Übersicht"
+                href="/detlef/projekte/neuenheim"
+              >
+                Geschichte und Entwicklung des Heidelberger Stadtteils Neuenheim.
+              </ListItem>
+              <ListItem
+                title="Überblick"
+                href="/detlef/projekte/neuenheim/ueberblick"
+              >
+                Geografische Lage, Bevölkerung und wichtige Einrichtungen.
+              </ListItem>
+              <ListItem
+                title="Die Eingemeindung Neuenheims"
+                href="/detlef/projekte/neuenheim/eingemeindung"
+              >
+                Der Prozess der Eingliederung in die Stadt Heidelberg im Jahr 1891.
+              </ListItem>
+              <ListItem
+                title="Neuenheim ist halb Europa"
+                href="/detlef/projekte/neuenheim/ist-halb-europa"
+              >
+                Die kulturelle Vielfalt und internationale Prägung des Stadtteils.
+              </ListItem>
+              <ListItem
+                title="Krieg der Knöpfe"
+                href="/detlef/projekte/neuenheim/interview-krauch"
+              >
+                Interview mit Helmut Krauch über seine Kindheit in Neuenheim.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Heidelberger Schulgeschichten</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ListItem
+                title="Übersicht"
+                href="/detlef/projekte/heidelberger-schulgeschichten"
+              >
+                Die Entwicklung des Schulwesens in Heidelberg vom Mittelalter bis zur Gegenwart.
+              </ListItem>
+              <ListItem
+                title="Die Anfänge"
+                href="/detlef/projekte/heidelberger-schulgeschichten/anfaenge"
+              >
+                Frühe Schulgeschichte in Heidelberg - von Klosterschulen bis zum Gymnasium.
+              </ListItem>
+              <ListItem
+                title="Bürger und Bauern"
+                href="/detlef/projekte/heidelberger-schulgeschichten/buerger-und-bauern"
+              >
+                Bildung für verschiedene Stände im historischen Heidelberg.
+              </ListItem>
+              <ListItem
+                title="Das 18. Jahrhundert"
+                href="/detlef/projekte/heidelberger-schulgeschichten/das-18te-jahrhundert"
+              >
+                Schulgeschichte im 18. Jahrhundert.
+              </ListItem>
+              <ListItem
+                title="Das 19. Jahrhundert"
+                href="/detlef/projekte/heidelberger-schulgeschichten/das-19te-jahrhundert"
+              >
+                Schulgeschichte im 19. Jahrhundert.
+              </ListItem>
+              <ListItem
+                title="Das 20. Jahrhundert"
+                href="/detlef/projekte/heidelberger-schulgeschichten/das-20te-jahrhundert"
+              >
+                Schulgeschichte im 20. Jahrhundert.
+              </ListItem>
+              <ListItem
+                title="Die Lehrerschaft des KFG in der NS-Zeit"
+                href="/detlef/projekte/heidelberger-schulgeschichten/lehrerschaft-kfg-3tes-reich"
+              >
+                Die Rolle der Lehrerschaft des Kurfürst-Friedrich-Gymnasiums während der NS-Zeit.
+              </ListItem>
+              <ListItem
+                title="Schülerunruhen am KFG im Jahre 1968"
+                href="/detlef/projekte/heidelberger-schulgeschichten/schuelerunruhen-am-kfg"
+              >
+                Die Schülerunruhen am Kurfürst-Friedrich-Gymnasium im Jahr 1968.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Deutsch</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              <ListItem
+                title="Übersicht"
+                href="/detlef/deutsch"
+              >
+                Alle Materialien und Textbeispiele für den Deutschunterricht.
+              </ListItem>
+              <ListItem
+                title="Textinterpretation"
+                href="/detlef/deutsch/textinterpretation"
+              >
+                Beispiele für Textinterpretationen verschiedener literarischer Werke.
+              </ListItem>
+              <ListItem
+                title="Texterörterung"
+                href="/detlef/deutsch/texterrterung"
+              >
+                Auszüge aus dem „Leviathan" von Thomas Hobbes mit Erläuterungen.
+              </ListItem>
+              <ListItem
+                title="Erörterung"
+                href="/detlef/deutsch/errterung"
+              >
+                Erörterung zu Hobbes' Aussage über Schuld und Hass.
+              </ListItem>
+              <ListItem
+                title="Essay"
+                href="/detlef/deutsch/essay-themen/essay"
+              >
+                Informationen zur Textform Essay mit Beispielen und Anleitungen.
+              </ListItem>
+              <ListItem
+                title="Vom Text zum Schaubild"
+                href="/detlef/deutsch/vom-text-zum-schaubild"
+              >
+                Anleitung zur Umwandlung von Texten in visuelle Darstellungen.
+              </ListItem>
+              <ListItem
+                title="Needful Things"
+                href="/detlef/deutsch/needful-things---in-einer-kleinen-stadt"
+              >
+                Analyse von Stephen Kings Roman "In einer kleinen Stadt".
+              </ListItem>
+              <ListItem
+                title="Fremdenfeindlichkeit"
+                href="/detlef/deutsch/fremdenfeindlichkeit"
+              >
+                Textanalyse zu Hans Magnus Enzensbergers "Die große Wanderung".
+              </ListItem>
+              <ListItem
+                title="Menschliche Moral"
+                href="/detlef/deutsch/versuch-einer-beschreibung-menschlicher-moral"
+              >
+                Philosophischer Versuch zur Beschreibung menschlicher Moral.
+              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
