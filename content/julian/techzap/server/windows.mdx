@@ -1,0 +1,17 @@
+---
+title: "Windows - Techzap"
+description: "Windows Server - IIS Konfiguration und Tipps"
+author: "Julian Zeiler"
+tags: ["Julian", "Techzap", "Windows", "Server"]
+date: "2024-01-01"
+---
+
+# Windows
+
+## IIS Konfiguration
+
+- **[ListenOnlyList Registry Werte - IIS an IP binden](/julian/techzap/server/windows/listenonlylist-registry-werte-iis-an-ip-binden)**
+  Wenn IIS auf einem bestimmten Port auf Anfragen reagieren soll, bindet er in der Regel an alle vorhandenen IP-Adressen. Die folgende Lösung zeigt, wie man IIS über den Registry Schlüssel ListenOnlyList so einstellen kann, dass er nur noch auf einer IP-Adresse antwortet.
+
+- **[IIS und Apache auf einem Server parallel betreiben](/julian/techzap/server/windows/iis-und-apache-auf-einem-server-parallel-betreiben)**
+  Um die Web-Server IIS und Apache parallel betreiben zu können, muss ein Server (in diesem Fall Apache) alle HTTP-Anfragen annehmen und diese bei bestimmten Webseiten an den anderen Server (IIS) weiterleiten bzw. durchschleifen.

@@ -1,0 +1,24 @@
+---
+title: "Grep: In zwei Dateien vorkommende Zeilen entfernen"
+description: "Grep: In zwei Dateien vorkommende Zeilen entfernen"
+author: "Julian Zeiler"
+tags: ["Julian", "Techzap", "Grep"]
+---
+
+Bei unserem Problem benötigen wir diese Funktion, denn wir wollen alle Zeilen aus Datei A, die nicht ebenfalls in Datei B vorkommen ausgeben lassen.
+
+## Lösung: `grep -vxf Datei_B.txt Datei_A.txt` - die gesuchten Zeilen finden
+
+Um Zeilen rauszuschmeißen, die in Datei_A.txt und ebenfalls in Datei_B.txt vorkommen, verwenden wir folgenden Befehl:
+
+grep -vxf Datei_B.txt Datei_A.txt
+
+Die Kommandooption -v steht hierbei für das umkehren der Treffer, d.h. nur Zeilen aus Datei_A.txt, die nicht in Datei_B.txt vorkommen gelten als Treffer.
+
+Die Kommandooption -x gibt an, dass jeweils die ganze Zeilen verglichen werden.
+
+Mit der Kommandooption -f lesen wir die Ausdrücke aus der Datei Datei_B.txt ein.
+
+Somit wurde das Problem mit einem einzigen kurzen grep-Befehl gelöst.
+
+Copyright © 1996 - 2020 Detlef und Julian Zeiler

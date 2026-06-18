@@ -18,6 +18,8 @@
         "name": "next"
       }
     ],
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
     "paths": {
       "@/*": ["./src/*"]
     }

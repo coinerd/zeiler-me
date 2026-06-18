@@ -1,35 +1,77 @@
-import Link from "next/link"
+import Link from 'next/link';
+import { authors } from '@/lib/authors';
+
+const detlef = authors.detlef!;
+const julian = authors.julian!;
+
+const footerLinkClasses =
+  'text-[13px] text-muted-foreground underline-offset-4 hover:text-foreground hover:underline transition-colors duration-200';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t py-6 md:py-10 bg-gradient-to-r from-primary/5 to-accent/5">
-      <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            {new Date().getFullYear()} ZEILER.me | Alle Rechte vorbehalten
-          </p>
+    <footer className="border-t border-border/40 py-12 md:py-16">
+      <div className="container max-w-6xl px-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          {/* Brand */}
+          <div className="flex flex-col gap-1.5">
+            <Link
+              href="/"
+              className="text-sm font-semibold tracking-[-0.02em] transition-colors hover:text-primary"
+            >
+              zeiler<span className="text-primary/50">.me</span>
+            </Link>
+            <p className="text-xs text-muted-foreground/80">
+              Geschichte · Medien · Technologie aus Heidelberg
+            </p>
+          </div>
+
+          {/* Detlef */}
+          <nav aria-label="Detlef Zeiler Navigation" className="flex flex-col gap-2">
+            <h3 className="mb-3 text-sm font-semibold text-foreground/80">Detlef Zeiler</h3>
+            <Link href={detlef.href} className={footerLinkClasses}>
+              Übersicht
+            </Link>
+            {detlef.sections.map((section) => (
+              <Link key={section.href} href={section.href} className={footerLinkClasses}>
+                {section.title}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Julian */}
+          <nav aria-label="Julian Zeiler Navigation" className="flex flex-col gap-2">
+            <h3 className="mb-3 text-sm font-semibold text-foreground/80">Julian Zeiler</h3>
+            <Link href={julian.href} className={footerLinkClasses}>
+              Übersicht
+            </Link>
+            {julian.sections.map((section) => (
+              <Link key={section.href} href={section.href} className={footerLinkClasses}>
+                {section.title}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Meta */}
+          <nav aria-label="Allgemeine Navigation" className="flex flex-col gap-2">
+            <h3 className="mb-3 text-sm font-semibold text-foreground/80">Allgemeines</h3>
+            <Link href="/" className={footerLinkClasses}>
+              Startseite
+            </Link>
+            <Link href="/tags" className={footerLinkClasses}>
+              Tags
+            </Link>
+            <Link href="/impressum" className={footerLinkClasses}>
+              Impressum
+            </Link>
+          </nav>
         </div>
-        <div className="flex gap-4">
-          <Link
-            href="/detlef"
-            className="text-sm font-medium text-primary underline-offset-4 hover:text-primary/80 hover:underline transition-colors"
-          >
-            Detlef Zeiler
-          </Link>
-          <Link
-            href="/julian"
-            className="text-sm font-medium text-secondary underline-offset-4 hover:text-secondary/80 hover:underline transition-colors"
-          >
-            Julian Zeiler
-          </Link>
-          <Link
-            href="/impressum"
-            className="text-sm font-medium text-accent underline-offset-4 hover:text-accent/80 hover:underline transition-colors"
-          >
-            Impressum
-          </Link>
+
+        <div className="mt-10 border-t border-border/20 pt-6 text-center">
+          <p className="text-xs text-muted-foreground/80">
+            © {new Date().getFullYear()} Alle Rechte vorbehalten
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

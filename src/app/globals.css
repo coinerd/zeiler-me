@@ -1,168 +1,712 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
-    /* Light Mode - Vibrant Professional */
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* ═══════════════════════════════════════════════════════════════
+       Light Mode — Refined Swiss Editorial
+       ─────────────────────────────────────────────────────────────
+       A premium editorial palette with cool blue undertones inspired
+       by Swiss typography tradition. Every shade is deliberately
+       calibrated for maximum readability and visual calm.
 
+       Design principles:
+       • Cool blue-steel undertones — professional, not clinical
+       • High contrast foreground (near-black with blue cast)
+       • Muted elements use distinct tonal steps (not opacity tricks)
+       • Shadows use cool blue-tinted grays
+       • Single accent color family: refined indigo-slate
+       ═══════════════════════════════════════════════════════════════ */
+
+    /* Background: cool paper white — like premium stationery */
+    --background: 220 14% 97.5%;
+    /* Foreground: deep blue-charcoal — authoritative, never harsh */
+    --foreground: 222 24% 7%;
+
+    /* Cards: pristine white — crisp contrast against background */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
- 
-    --primary: 210 100% 45%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 25 95% 53%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
- 
-    --accent: 150 80% 40%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --card-foreground: 222 24% 7%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 11%;
- 
+    /* Popovers: pristine white */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 24% 7%;
+
+    /* Primary: refined indigo-slate — sophisticated, trustworthy */
+    --primary: 224 48% 24%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Secondary: cool stone for subtle contrast */
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 222 24% 7%;
+
+    /* Muted: cool mist for background areas */
+    --muted: 220 12% 95%;
+    /* Muted text: medium gray with blue undertone — legible but recessive */
+    --muted-foreground: 220 8% 44%;
+
+    /* Accent: cool lavender-gray for interactive states */
+    --accent: 224 12% 93%;
+    --accent-foreground: 222 24% 7%;
+
+    /* Destructive: controlled crimson */
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Borders: ghost-line cool gray — structure without weight */
+    --border: 220 10% 91%;
+    --input: 220 10% 91%;
+    /* Ring: primary for consistent identity */
+    --ring: 224 48% 24%;
+
+    /* Editorial radius */
     --radius: 0.5rem;
   }
- 
+
   .dark {
-    /* Dark Mode - Rich Deep */
+    /* Dark Mode — Rich Deep */
     --background: 223 47% 8%;
     --foreground: 213 31% 91%;
- 
+
     --card: 223 47% 10%;
     --card-foreground: 213 31% 91%;
- 
+
     --popover: 223 47% 10%;
     --popover-foreground: 213 31% 91%;
- 
+
     --primary: 210 100% 60%;
     --primary-foreground: 222 47% 11%;
- 
+
     --secondary: 25 95% 53%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --muted: 223 47% 15%;
     --muted-foreground: 215 20% 70%;
- 
+
     --accent: 150 80% 45%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 63% 40%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --border: 217 33% 20%;
     --input: 217 33% 20%;
     --ring: 213 31% 70%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Enable OpenType features for better typography */
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1,
+      'calt' 1,
+      'zero' 1;
+    /* Improve text rendering */
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  /* Professional heading hierarchy — tighter tracking for larger sizes */
+  h1 {
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    line-height: 1.08;
+  }
+  h2 {
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+  h3 {
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  h4 {
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* Professional link treatment */
+  a {
+    text-decoration-skip-ink: auto;
+  }
+
+  /* Better paragraph spacing */
+  p {
+    hanging-punctuation: first;
+  }
+
+  /* Selection color matches primary */
+  ::selection {
+    background: hsl(var(--primary) / 0.12);
+    color: hsl(var(--foreground));
   }
 }
 
-/* Custom animations */
+/* Custom animations — smooth, professional easing */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Animation utility classes */
 .animate-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-slide-up {
-  animation: slideUp 0.6s ease-out;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s infinite ease-in-out;
-}
-
-/* Gradient Backgrounds */
+/* ── Hero gradient: sophisticated indigo with depth ── */
 .gradient-background {
-  background: linear-gradient(-45deg, 
-    hsl(var(--primary)), 
-    hsl(var(--accent)), 
-    hsl(var(--secondary)),
-    hsl(var(--primary) / 0.8));
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, hsl(224 40% 35% / 0.2) 0%, transparent 70%),
+    linear-gradient(155deg, hsl(224 48% 16%) 0%, hsl(226 42% 20%) 40%, hsl(228 38% 24%) 100%);
+  color: hsl(220 14% 96%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle light cone effect */
+.gradient-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 50% 40% at 50% 40%,
+    hsl(224 50% 45% / 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .dark .gradient-background {
-  background: linear-gradient(-45deg, 
-    hsl(var(--primary) / 0.9), 
-    hsl(var(--accent) / 0.9), 
-    hsl(var(--secondary) / 0.9),
-    hsl(var(--primary) / 0.7));
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, hsl(223 47% 18% / 0.3) 0%, transparent 70%),
+    linear-gradient(135deg, hsl(223 47% 12%) 0%, hsl(220 40% 20%) 50%, hsl(215 35% 26%) 100%);
+  color: hsl(213 31% 91%);
 }
 
-/* Hover effects */
+/* ── Card interactions — refined lift with cool shadow ── */
 .hover-lift {
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 32px -8px hsl(222 24% 7% / 0.08),
+    0 4px 12px -4px hsl(222 24% 7% / 0.04);
 }
 
 .card-transition {
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-transition:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 40px -12px hsl(222 24% 7% / 0.1),
+    0 6px 16px -6px hsl(222 24% 7% / 0.04);
 }
 
-/* Dark mode card hover effect */
-.dark .card-transition:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+/* Dark mode card hover */
+.dark .card-transition:hover,
+.dark .hover-lift:hover {
+  box-shadow:
+    0 8px 30px -8px rgba(0, 0, 0, 0.35),
+    0 4px 12px -4px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Section divider — refined decorative line ── */
+.section-divider {
+  width: 48px;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, hsl(var(--primary) / 0.4), hsl(var(--primary) / 0.15));
+  margin: 0 auto;
+}
+
+/* ── Focus styles — accessible and professional ── */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring) / 0.5);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ── Scroll behavior ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Accessibility: Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gradient-background {
+    animation: none !important;
+  }
+}
+
+/* ===== Immersive Editorial Article Styles ===== */
+
+/* Article body — refined magazine typography */
+.prose-article {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: hsl(var(--foreground));
+}
+
+.prose-article h1 {
+  font-size: 2.25rem;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-article h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid hsl(var(--border));
+  position: relative;
+}
+
+.prose-article h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: hsl(var(--primary));
+}
+
+.prose-article h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-article h4 {
+  font-size: 1.175rem;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-article p {
+  margin-top: 1.5rem;
+  hanging-punctuation: first;
+}
+
+.prose-article p:first-child {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: hsl(var(--foreground) / 0.85);
+}
+
+/* Drop cap for first paragraph after hero */
+.prose-article > p:first-of-type::first-letter {
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  margin-top: 0.05em;
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+.prose-article a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+  transition: color 0.2s ease;
+}
+
+.prose-article a:hover {
+  color: hsl(var(--primary) / 0.8);
+}
+
+.prose-article blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid hsl(var(--primary));
+  background: hsl(var(--muted) / 0.5);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+  position: relative;
+}
+
+.prose-article blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.25rem;
+  left: 0.75rem;
+  font-size: 4rem;
+  color: hsl(var(--primary) / 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.prose-article ul,
+.prose-article ol {
+  margin: 1.5rem 0;
+  padding-left: 1.75rem;
+}
+
+.prose-article li {
+  margin-top: 0.5rem;
+  line-height: 1.75;
+}
+
+.prose-article ul li::marker {
+  color: hsl(var(--primary) / 0.5);
+}
+
+.prose-article ol li::marker {
+  color: hsl(var(--primary) / 0.5);
+  font-weight: 600;
+}
+
+/* Full-bleed image — breaks out of container */
+.full-bleed-image {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+}
+
+.full-bleed-image img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.full-bleed-image figcaption {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  background: hsl(var(--background));
+}
+
+/* Editorial inline image — elegant treatment */
+.editorial-image {
+  position: relative;
+}
+
+/* Editorial breakout — subtle width expansion beyond text column */
+.editorial-breakout {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: calc(100% + 2rem);
+}
+
+@media (min-width: 768px) {
+  .editorial-breakout {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
+  }
+}
+
+/* Cinematic scale for full-bleed images */
+.cinematic-scale {
+  transform: scale(1.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cinematic-scale:hover {
+  transform: scale(1.08);
+}
+
+/* Float images — magazine-style text wrapping */
+.float-image {
+  width: 45%;
+  max-width: 360px;
+  margin: 0 1.5rem 1rem 0;
+  float: left;
+}
+
+.float-image-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.float-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.12);
+}
+
+.float-image figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Clearfix on paragraphs after float */
+.prose-article p::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Ensure prose overflow allows floats */
+.prose-article {
+  overflow: visible;
+}
+
+/* Gallery images — paired side-by-side layout */
+.gallery-image {
+  display: inline-block;
+  width: calc(50% - 0.5rem);
+  vertical-align: top;
+  margin: 0.25rem;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.gallery-image figcaption {
+  font-size: 0.75rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.25rem;
+}
+
+/* Gallery heading styling */
+.prose-article h2:has(+ figure),
+.prose-article h2:has(+ .full-bleed-image) {
+  border-bottom-color: hsl(var(--primary) / 0.3);
+}
+
+/* Mobile: stack floats and gallery */
+@media (max-width: 640px) {
+  .float-image,
+  .float-image-right {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem 0;
+  }
+  .gallery-image {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .gallery-image img {
+    height: auto;
+  }
+}
+
+.editorial-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.editorial-image figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
+/* Image section header "Bilder" — make it a styled gallery heading */
+.prose-article h2:last-of-type {
+  margin-top: 4rem;
+}
+
+/* Tables */
+.prose-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.prose-article th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid hsl(var(--border));
+  font-weight: 600;
+  background: hsl(var(--muted) / 0.5);
+}
+
+.prose-article td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Code */
+.prose-article code {
+  font-size: 0.875em;
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  background: hsl(var(--muted));
+}
+
+.prose-article pre {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+}
+
+.prose-article pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Strong emphasis */
+.prose-article strong {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+/* Separator */
+.prose-article hr {
+  margin: 3rem 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--border)) 20%,
+    hsl(var(--border)) 80%,
+    transparent
+  );
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Hide non-essential UI elements */
+  nav,
+  header,
+  footer,
+  .site-footer,
+  .site-header,
+  button,
+  .back-to-top,
+  .reading-progress,
+  .theme-toggle,
+  [aria-label='Breadcrumb'],
+  .gradient-background {
+    display: none !important;
+  }
+
+  /* Reset gradient hero sections */
+  .gradient-background {
+    background: #333 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ensure links show URLs */
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  /* Remove shadows and animations */
+  * {
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Page breaks */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  img {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Margins */
+  @page {
+    margin: 2cm;
+  }
 }

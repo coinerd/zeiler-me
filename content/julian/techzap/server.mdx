@@ -1,0 +1,22 @@
+---
+title: "Server - Techzap"
+description: "Server - IT-Themen rund um Unix/Linux und Windows Server"
+author: "Julian Zeiler"
+tags: ["Julian", "Techzap", "Server"]
+date: "2024-01-01"
+---
+
+# Server
+
+## Unix/Linux
+
+- **[Zwei Dateien vergleichen — vorkommende Zeilen entfernen](/julian/techzap/server/unix-linux/grep-in-zwei-dateien-vorkommende-zeilen-entfernen)**
+  Der Unix/Linux Befehl `grep` wird meistens dafür verwendet, nach einem bestimmten Ausdruck zu filtern. Man kann ihn jedoch auch mit Ausdrücken füttern, die nicht vorkommen sollen. Bei unserem Problem benötigen wir diese Funktion, denn wir wollen alle Zeilen aus Datei A, die nicht ebenfalls in Datei B vorkommen, ausgeben lassen.
+
+## Windows
+
+- **[IIS an IP-Adressen binden (ListenOnlyList Registry)](/julian/techzap/server/windows/listenonlylist-registry-werte-iis-an-ip-binden)**
+  Wenn IIS auf einem bestimmten Port auf Anfragen reagieren soll, bindt er in der Regel an alle vorhandenen IP-Adressen. Die Lösung zeigt, wie man IIS über den Registry-Schlüssel `ListenOnlyList` so einstellen kann, dass er nur noch auf einer IP-Adresse antwortet.
+
+- **[IIS und Apache parallel betreiben](/julian/techzap/server/windows/iis-und-apache-auf-einem-server-parallel-betreiben)**
+  Um die Web-Server IIS und Apache parallel betreiben zu können, muss ein Server (in diesem Fall Apache) alle HTTP-Anfragen annehmen und diese bei bestimmten Webseiten an den anderen Server (IIS) weiterleiten bzw. durchschleifen.
