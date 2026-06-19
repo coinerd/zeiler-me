@@ -333,7 +333,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl">
             <div className="aspect-video w-full overflow-hidden rounded-lg border border-border/50 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
               <iframe
-                src="https://www.youtube.com/embed/B8ozX05lG50"
+                src="https://www.youtube-nocookie.com/embed/B8ozX05lG50"
                 title="Heidelberg Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
