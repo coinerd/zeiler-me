@@ -73,7 +73,14 @@ export default async function TagPage({ params }: PageProps) {
       {/* Cinematic Hero Section */}
       <section className="relative flex min-h-[40vh] items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={withBasePath(heroImage)} alt="" fill className="object-cover" sizes="100vw" priority />
+          <Image
+            src={withBasePath(heroImage)}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
         </div>
