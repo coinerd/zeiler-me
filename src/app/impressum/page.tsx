@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { FileText, Phone, Shield, ExternalLink } from 'lucide-react';
+import { withBasePath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Impressum | zeiler.me',
@@ -64,7 +65,7 @@ export default function ImpressumPage() {
       <section className="relative flex min-h-[40vh] items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/detlef/projekte/heiligenberg/geschichte/image-10.jpg"
+            src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-10.jpg")}
             alt=""
             fill
             className="object-cover"

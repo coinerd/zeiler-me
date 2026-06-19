@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BarChart3, Clock, Repeat } from 'lucide-react';
 import type { Metadata } from 'next';
+import { withBasePath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Detlef Zeiler | zeiler.me',
@@ -44,7 +45,7 @@ export default function DetlefPage() {
       <section className="relative w-full overflow-hidden py-12 md:py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/detlef/geschichte/thalmann/image-2.jpg"
+            src={withBasePath("/images/detlef/geschichte/thalmann/image-2.jpg")}
             alt=""
             fill
             priority
@@ -75,7 +76,7 @@ export default function DetlefPage() {
             <div className="grid grid-cols-1 gap-0 md:grid-cols-5">
               <div className="relative min-h-[200px] md:col-span-2">
                 <Image
-                  src="/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg"
+                  src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg")}
                   alt="Heidelberg"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -123,7 +124,7 @@ export default function DetlefPage() {
               <Card className="overflow-hidden border-t-4 border-primary transition-shadow hover:shadow-lg">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/detlef/geschichte/thalmann/image-1.jpg"
+                    src={withBasePath("/images/detlef/geschichte/thalmann/image-1.jpg")}
                     alt="Alexander von Humboldts Südamerikareise"
                     fill
                     className="object-cover"
@@ -174,7 +175,7 @@ export default function DetlefPage() {
               <Card className="overflow-hidden border-t-4 border-secondary transition-shadow hover:shadow-lg">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg"
+                    src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg")}
                     alt="Neuenheim wird Stadtteil von Heidelberg"
                     fill
                     className="object-cover"
@@ -216,7 +217,7 @@ export default function DetlefPage() {
               <Card className="overflow-hidden border-t-4 border-secondary transition-shadow hover:shadow-lg">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg"
+                    src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
                     alt="Hexenglauben und Hexenprozesse"
                     fill
                     className="object-cover"
@@ -269,7 +270,7 @@ export default function DetlefPage() {
               <Card className="overflow-hidden border-t-4 border-accent transition-shadow hover:shadow-lg">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/detlef/medien/geruechte-rumores-drehbuch/image-1.jpg"
+                    src={withBasePath("/images/detlef/medien/geruechte-rumores-drehbuch/image-1.jpg")}
                     alt="Gerüchte - Rumores"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -320,7 +321,7 @@ export default function DetlefPage() {
               <CardHeader className="relative overflow-hidden p-0">
                 <div className="relative h-48">
                   <Image
-                    src="/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg"
+                    src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
                     alt="Praktische Heimatkunde"
                     fill
                     className="object-cover"
@@ -362,7 +363,7 @@ export default function DetlefPage() {
               <CardHeader className="relative overflow-hidden p-0">
                 <div className="relative h-48">
                   <Image
-                    src="/images/detlef/projekte/old-providence-die-insel-providencia/image-1.jpg"
+                    src={withBasePath("/images/detlef/projekte/old-providence-die-insel-providencia/image-1.jpg")}
                     alt="Die Insel Providencia"
                     fill
                     className="object-cover"

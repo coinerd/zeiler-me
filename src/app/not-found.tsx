@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FileQuestion } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { withBasePath } from '@/lib/utils';
 
 export default function NotFound() {
   return (
@@ -9,7 +10,7 @@ export default function NotFound() {
       {/* Background image with strong overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg"
+          src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg")}
           alt=""
           fill
           sizes="100vw"

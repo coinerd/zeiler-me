@@ -6,6 +6,7 @@ import { getAllTags, getArticlesByTag } from '@/lib/content';
 import { siteConfig } from '@/lib/config';
 import Link from 'next/link';
 import Image from 'next/image';
+import { withBasePath } from '@/lib/utils';
 import { Tag, Hash } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -66,7 +67,7 @@ export default async function TagsIndexPage() {
       <section className="relative flex min-h-[45vh] items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg"
+            src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg")}
             alt=""
             fill
             className="object-cover"

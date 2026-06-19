@@ -3,6 +3,7 @@ import type { LucideIcon } from 'lucide-react';
 import { ArrowRight, FileText, Code, BookOpen, Lightbulb } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { withBasePath } from '@/lib/utils';
 import {
   Card,
   CardContent,
@@ -57,7 +58,7 @@ export default function ArtikelOverviewPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-secondary/10 via-primary/5 to-accent/10">
         <div className="absolute inset-0">
           <Image
-            src="/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-2.jpg"
+            src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-2.jpg")}
             alt=""
             fill
             priority
@@ -158,7 +159,7 @@ export default function ArtikelOverviewPage() {
           <div className="grid grid-cols-1 gap-0 md:grid-cols-4">
             <div className="relative min-h-[160px] md:col-span-1">
               <Image
-                src="/images/detlef/projekte/heiligenberg/geschichte/image-5.jpg"
+                src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-5.jpg")}
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
