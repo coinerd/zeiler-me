@@ -1,14 +1,6 @@
 'use client';
 
-const basePath = process.env.BASE_PATH || '';
-
-function withBasePath(path: string | undefined): string | undefined {
-  if (!path) return path;
-  if (path.startsWith('/') && !path.startsWith('//')) {
-    return `${basePath}${path}`;
-  }
-  return path;
-}
+import { withBasePath } from '@/lib/utils';
 
 /**
  * Unified Article Client Component
@@ -317,7 +309,7 @@ function HeroWithImage({
       {/* Background Image — full bleed with cinematic parallax feel */}
       <div className="absolute inset-0">
         <Image
-          src={withBasePath(image) as string}
+          src={withBasePath(image)}
           alt={title}
           fill
           priority

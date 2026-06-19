@@ -37,6 +37,9 @@ const nextConfig = {
   basePath: process.env.BASE_PATH || '',
   assetPrefix: process.env.BASE_PATH || '',
   trailingSlash: true,
+  env: {
+    BASE_PATH: process.env.BASE_PATH || '',
+  },
   images: {
     // Image Optimization API requires a server; disabled for static export.
     unoptimized: true,

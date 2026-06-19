@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { withBasePath } from '@/lib/utils';
 
 interface ArticleCardProps {
   title: string;
@@ -26,7 +27,7 @@ export function ArticleCard({
       <Card className="card-transition overflow-hidden border border-border/50 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
         <div className="relative h-52 overflow-hidden">
           <Image
-            src={image}
+            src={withBasePath(image)}
             alt={title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
