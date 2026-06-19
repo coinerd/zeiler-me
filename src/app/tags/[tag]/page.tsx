@@ -49,21 +49,22 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { tag } = await params;
+  const decodedTag = decodeURIComponent(tag);
   return {
-    title: `Artikel zum Thema "${tag}" | ${siteConfig.name}`,
-    description: `Alle Artikel mit dem Tag "${tag}" auf zeiler.me`,
+    title: `Artikel zum Thema "${decodedTag}" | ${siteConfig.name}`,
+    description: `Alle Artikel mit dem Tag "${decodedTag}" auf zeiler.me`,
   };
 }
 
 export default async function TagPage({ params }: PageProps) {
   const { tag } = await params;
-  const articles = getArticlesByTag(tag);
+  const decodedTag = decodeURIComponent(tag);
+  const articles = getArticlesByTag(decodedTag);
 
   if (articles.length === 0) {
     notFound();
   }
 
-  const decodedTag = decodeURIComponent(tag);
   // Deterministic image selection based on tag name
   const imageIndex = decodedTag.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const heroImage = (heroImages[imageIndex % heroImages.length] ?? heroImages[0]) as string;
