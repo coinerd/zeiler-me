@@ -61,19 +61,22 @@
     "eslint-config-prettier": "^9.1.2",
     "glob": "^10.3.10",
     "pa11y": "^9.1.1",
-    "postcss": "^8",
+    "postcss": "^8.5.10",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "rimraf": "^5.0.5",
     "start-server-and-test": "^3.0.9",
     "tailwindcss": "^3.3.0",
     "typescript": "^5",
-    "vitest": "^1.6.1"
+    "vitest": "^4.1.9"
   },
   "overrides": {
     "inflight": "npm:lru-cache@^7.14.1",
     "glob": "^10.3.10",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "postcss": "^8.5.10",
+    "serialize-javascript": "^7.0.5",
+    "js-yaml": "^3.14.1"
   },
   "allowScripts": {
     "@next/bundle-analyzer@16.2.7": true,

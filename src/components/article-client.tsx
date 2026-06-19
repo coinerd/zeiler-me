@@ -58,12 +58,14 @@ export interface ArticleClientProps {
   /** Detlef-only: direct child articles. */
   childArticles?: { title: string; description: string; href: string }[] | undefined;
   /** Detlef-only: contextual section navigation. */
-  sectionNav?: {
-    sectionHref: string;
-    sectionTitle: string;
-    subsectionHref?: string | undefined;
-    subsectionTitle?: string | undefined;
-  } | undefined;
+  sectionNav?:
+    | {
+        sectionHref: string;
+        sectionTitle: string;
+        subsectionHref?: string | undefined;
+        subsectionTitle?: string | undefined;
+      }
+    | undefined;
   footerBackHref?: string | undefined;
   footerBackLabel?: string | undefined;
   children: ReactNode;
@@ -394,8 +396,12 @@ function HeroWithoutImage({
   return (
     <header className="gradient-background relative overflow-hidden pb-16 pt-20">
       {/* Decorative elements */}
-      <div className={`absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/3 rounded-full ${accent.heroBlurA} blur-3xl`} />
-      <div className={`absolute bottom-0 left-0 h-64 w-64 -translate-x-1/4 translate-y-1/2 rounded-full ${accent.heroBlurB} blur-3xl`} />
+      <div
+        className={`absolute right-0 top-0 h-96 w-96 -translate-y-1/2 translate-x-1/3 rounded-full ${accent.heroBlurA} blur-3xl`}
+      />
+      <div
+        className={`absolute bottom-0 left-0 h-64 w-64 -translate-x-1/4 translate-y-1/2 rounded-full ${accent.heroBlurB} blur-3xl`}
+      />
 
       <div className="container relative z-10 max-w-4xl">
         {breadcrumb && <Breadcrumb items={breadcrumb} variant="default" />}

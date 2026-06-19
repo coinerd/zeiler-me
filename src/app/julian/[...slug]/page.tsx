@@ -131,9 +131,7 @@ export default async function JulianArticlePage({ params }: PageProps) {
   const parent = getParentLink(slugPath);
 
   // Build Julian-style fallback nav items
-  const fallbackNav: FallbackNavItem[] = [
-    { label: 'Julian', href: '/julian', current: false },
-  ];
+  const fallbackNav: FallbackNavItem[] = [{ label: 'Julian', href: '/julian', current: false }];
   if (parent) {
     fallbackNav.push({ label: parent.label, href: parent.href, current: false });
   }
