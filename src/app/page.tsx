@@ -28,7 +28,7 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg")}
+            src={withBasePath('/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg')}
             alt=""
             fill
             priority
@@ -83,7 +83,9 @@ export default function Home() {
             <Card className="card-transition overflow-hidden border border-border/60 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
               <div className="relative h-44 overflow-hidden">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg'
+                  )}
                   alt="Neuenheim wird Stadtteil von Heidelberg"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -125,7 +127,9 @@ export default function Home() {
             <Card className="card-transition overflow-hidden border border-border/60 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
               <div className="relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/10">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-3.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-3.jpg'
+                  )}
                   alt="Auswirkungen von Open Source Lizenzen"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -167,7 +171,7 @@ export default function Home() {
             <Card className="card-transition overflow-hidden border border-border/60 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
               <div className="relative h-44 overflow-hidden">
                 <Image
-                  src={withBasePath("/images/detlef/geschichte/thalmann/image-2.jpg")}
+                  src={withBasePath('/images/detlef/geschichte/thalmann/image-2.jpg')}
                   alt="Alexander von Humboldts Südamerikareise"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -239,7 +243,9 @@ export default function Home() {
               <div className="hover-lift overflow-hidden rounded-lg border border-border/50 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
                 <div className="relative h-44 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                    )}
                     alt="Hexenglauben und Hexenprozesse"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -261,7 +267,9 @@ export default function Home() {
               <div className="hover-lift overflow-hidden rounded-lg border border-border/50 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
                 <div className="relative h-44 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/medien/geruechte-rumores-drehbuch/image-1.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/medien/geruechte-rumores-drehbuch/image-1.jpg'
+                    )}
                     alt="Gerüchte — Rumores"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -283,7 +291,9 @@ export default function Home() {
               <div className="hover-lift overflow-hidden rounded-lg border border-border/50 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
                 <div className="relative h-44 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/projekte/old-providence-die-insel-providencia/image-1.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/projekte/old-providence-die-insel-providencia/image-1.jpg'
+                    )}
                     alt="Die Insel Providencia"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -368,7 +378,7 @@ export default function Home() {
             <Card className="card-transition h-full overflow-hidden border border-border/50 bg-card shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
               <div className="relative h-52 overflow-hidden">
                 <Image
-                  src={withBasePath("/images/detlef/image-1.jpg")}
+                  src={withBasePath('/images/detlef/image-1.jpg')}
                   alt="Detlef Zeiler"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"

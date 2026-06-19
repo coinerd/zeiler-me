@@ -56,7 +56,9 @@ export default function JulianPage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg")}
+            src={withBasePath(
+              '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg'
+            )}
             alt=""
             fill
             priority
@@ -92,7 +94,9 @@ export default function JulianPage() {
             <div className="grid grid-cols-1 gap-0 md:grid-cols-5">
               <div className="relative min-h-[200px] md:col-span-2">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/die-elsenz-und-der-kraichgau/geographische-lage/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/die-elsenz-und-der-kraichgau/geographische-lage/image-1.jpg'
+                  )}
                   alt="Technologie und Landschaft"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -199,7 +203,9 @@ export default function JulianPage() {
               <Card className="overflow-hidden border-t-4 border-secondary transition-shadow hover:shadow-lg">
                 <div className="relative h-32 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-1.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-1.jpg'
+                    )}
                     alt="Was ist das Web 2.0?"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -235,7 +241,9 @@ export default function JulianPage() {
               <Card className="overflow-hidden border-t-4 border-secondary transition-shadow hover:shadow-lg">
                 <div className="relative h-32 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-2.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-2.jpg'
+                    )}
                     alt="Agile Methoden"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -275,7 +283,9 @@ export default function JulianPage() {
               <Card className="overflow-hidden border-t-4 border-secondary transition-shadow hover:shadow-lg">
                 <div className="relative h-32 overflow-hidden">
                   <Image
-                    src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-3.jpg")}
+                    src={withBasePath(
+                      '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-3.jpg'
+                    )}
                     alt="Open Source Lizenzen"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"

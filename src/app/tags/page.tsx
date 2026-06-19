@@ -67,7 +67,7 @@ export default async function TagsIndexPage() {
       <section className="relative flex min-h-[45vh] items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg")}
+            src={withBasePath('/images/detlef/projekte/heiligenberg/geschichte/image-3.jpg')}
             alt=""
             fill
             className="object-cover"

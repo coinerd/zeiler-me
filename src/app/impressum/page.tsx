@@ -65,7 +65,7 @@ export default function ImpressumPage() {
       <section className="relative flex min-h-[40vh] items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={withBasePath("/images/detlef/projekte/heiligenberg/geschichte/image-10.jpg")}
+            src={withBasePath('/images/detlef/projekte/heiligenberg/geschichte/image-10.jpg')}
             alt=""
             fill
             className="object-cover"

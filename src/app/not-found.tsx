@@ -10,7 +10,9 @@ export default function NotFound() {
       {/* Background image with strong overlay */}
       <div className="absolute inset-0">
         <Image
-          src={withBasePath("/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg")}
+          src={withBasePath(
+            '/images/detlef/projekte/heiligenberg/der-unheimliche-berg/image-4.jpg'
+          )}
           alt=""
           fill
           sizes="100vw"

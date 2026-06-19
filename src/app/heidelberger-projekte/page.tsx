@@ -34,7 +34,9 @@ export default function HeidelbergerProjektePage() {
       <section className="relative w-full overflow-hidden py-12 md:py-20 lg:py-24">
         <div className="absolute inset-0">
           <Image
-            src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg")}
+            src={withBasePath(
+              '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg'
+            )}
             alt="Heidelberg historisch"
             fill
             priority
@@ -70,7 +72,9 @@ export default function HeidelbergerProjektePage() {
             <div className="grid grid-cols-1 gap-0 md:grid-cols-5">
               <div className="relative min-h-[200px] md:col-span-2">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg'
+                  )}
                   alt="Heidelberg Geschichte"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -112,7 +116,9 @@ export default function HeidelbergerProjektePage() {
         <div className="animate-slide-up mb-16" style={{ animationDelay: '100ms' }}>
           <div className="relative h-64 overflow-hidden rounded-xl border border-border/50 md:h-96">
             <Image
-              src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg")}
+              src={withBasePath(
+                '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg'
+              )}
               alt="Historisches Heidelberg"
               fill
               className="object-cover"
@@ -149,7 +155,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg'
+                )}
                 alt="Stadtgründung"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -191,7 +199,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                )}
                 alt="Universität"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -233,7 +243,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                )}
                 alt="Strafrecht"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -275,7 +287,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                )}
                 alt="Sittenstrafordnung"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -318,7 +332,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg'
+                )}
                 alt="Das älteste Gewerbe"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -360,7 +376,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                )}
                 alt="Hexenglauben"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -402,7 +420,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg'
+                )}
                 alt="Juden"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -444,7 +464,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg'
+                )}
                 alt="Armenpflege"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -486,7 +508,9 @@ export default function HeidelbergerProjektePage() {
           >
             <div className="relative h-40 overflow-hidden">
               <Image
-                src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
+                src={withBasePath(
+                  '/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg'
+                )}
                 alt="Praktische Heimatkunde"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -540,7 +564,9 @@ export default function HeidelbergerProjektePage() {
             <CardHeader className="relative overflow-hidden p-0">
               <div className="relative h-48">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-1.jpg'
+                  )}
                   alt="Neuenheim wird Stadtteil von Heidelberg"
                   fill
                   className="object-cover"
@@ -582,7 +608,9 @@ export default function HeidelbergerProjektePage() {
             <CardHeader className="relative overflow-hidden p-0">
               <div className="relative h-48">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/heidelberg-im-mittelalter/hexenglauben-und-hexenprozesse/image-1.jpg'
+                  )}
                   alt="Hexenglauben und Hexenprozesse"
                   fill
                   className="object-cover"
@@ -623,7 +651,9 @@ export default function HeidelbergerProjektePage() {
             <CardHeader className="relative overflow-hidden p-0">
               <div className="relative h-48">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/heidelberg-im-mittelalter/praktische-heimatkunde/image-1.jpg'
+                  )}
                   alt="Praktische Heimatkunde"
                   fill
                   className="object-cover"
@@ -719,7 +749,9 @@ export default function HeidelbergerProjektePage() {
             <div className="md:col-span-1">
               <div className="relative h-full min-h-[300px] overflow-hidden rounded-xl">
                 <Image
-                  src={withBasePath("/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg")}
+                  src={withBasePath(
+                    '/images/detlef/projekte/neuenheim/otto-jaeger-ludwig-merz/image-2.jpg'
+                  )}
                   alt="Heidelberg Geschichte"
                   fill
                   className="object-cover"
