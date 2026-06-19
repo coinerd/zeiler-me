@@ -37,7 +37,9 @@ export function generatePageMetadata({
       locale: siteConfig.locale,
       type: type === 'article' ? 'article' : 'website',
       ...(publishedTime && { publishedTime }),
-      ...(image && { images: [{ url: image.startsWith('/') ? `${process.env.BASE_PATH || ''}${image}` : image }] }),
+      ...(image && {
+        images: [{ url: image.startsWith('/') ? `${process.env.BASE_PATH || ''}${image}` : image }],
+      }),
     },
     twitter: {
       card: 'summary_large_image',

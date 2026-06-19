@@ -132,7 +132,12 @@ export const mdxComponents: MDXComponents = {
       return (
         <figure className={`float-image float-image-${direction}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBasePath(src as string)} alt={alt?.replace(/^[<>]/, '') || ''} loading="lazy" {...props} />
+          <img
+            src={withBasePath(src as string)}
+            alt={alt?.replace(/^[<>]/, '') || ''}
+            loading="lazy"
+            {...props}
+          />
           {alt && alt.length > 1 && <figcaption>{alt.replace(/^[<>]/, '')}</figcaption>}
         </figure>
       );
@@ -165,7 +170,12 @@ export const mdxComponents: MDXComponents = {
       return (
         <figure className="gallery-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBasePath(src as string)} alt={alt?.replace(/^\*/, '') || ''} loading="lazy" {...props} />
+          <img
+            src={withBasePath(src as string)}
+            alt={alt?.replace(/^\*/, '') || ''}
+            loading="lazy"
+            {...props}
+          />
           {alt && alt.length > 1 && <figcaption>{alt.replace(/^\*/, '')}</figcaption>}
         </figure>
       );
