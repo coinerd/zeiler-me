@@ -110,7 +110,7 @@ export default async function TagsIndexPage() {
               {/* Card image background */}
               <div className="relative h-32 overflow-hidden">
                 <Image
-                  src={image}
+                  src={withBasePath(image)}
                   alt=""
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"

@@ -8,6 +8,7 @@ import { siteConfig } from '@/lib/config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Tag, ArrowRight } from 'lucide-react';
+import { withBasePath } from '@/lib/utils';
 
 // Image pool for tag hero variety
 const heroImages = [
@@ -72,7 +73,7 @@ export default async function TagPage({ params }: PageProps) {
       {/* Cinematic Hero Section */}
       <section className="relative flex min-h-[40vh] items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={heroImage} alt="" fill className="object-cover" sizes="100vw" priority />
+          <Image src={withBasePath(heroImage)} alt="" fill className="object-cover" sizes="100vw" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
         </div>
@@ -118,7 +119,7 @@ export default async function TagPage({ params }: PageProps) {
                     {/* Thumbnail */}
                     <div className="relative h-48 overflow-hidden md:col-span-1 md:h-full md:min-h-[180px]">
                       <Image
-                        src={cardImage}
+                        src={withBasePath(cardImage)}
                         alt=""
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
