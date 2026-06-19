@@ -9,6 +9,8 @@ import { InstallPrompt } from '@/components/install-prompt';
 import { SWUnregister } from '@/components/sw-unregister';
 import { siteConfig } from '@/lib/config';
 
+const basePath = process.env.BASE_PATH || '';
+
 const inter = Inter({
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
@@ -57,6 +59,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <link rel="icon" href={`${basePath}/favicon.ico`} sizes="any" />
+        <link rel="apple-touch-icon" href={`${basePath}/icons/apple-touch-icon.png`} />
+        <link rel="manifest" href={`${basePath}/manifest.webmanifest`} />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <ThemeProvider

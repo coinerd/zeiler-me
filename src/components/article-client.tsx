@@ -1,5 +1,15 @@
 'use client';
 
+const basePath = process.env.BASE_PATH || '';
+
+function withBasePath(path: string | undefined): string | undefined {
+  if (!path) return path;
+  if (path.startsWith('/') && !path.startsWith('//')) {
+    return `${basePath}${path}`;
+  }
+  return path;
+}
+
 /**
  * Unified Article Client Component
  *
@@ -306,7 +316,7 @@ function HeroWithImage({
     <header className="relative flex min-h-[85vh] items-end overflow-hidden">
       {/* Background Image — full bleed with cinematic parallax feel */}
       <div className="absolute inset-0">
-        <Image src={image} alt={title} fill priority className="object-cover" sizes="100vw" />
+        <Image src={withBasePath(image) as string} alt={title} fill priority className="object-cover" sizes="100vw" />
       </div>
 
       {/* Gradient overlays — multiple layers for depth */}

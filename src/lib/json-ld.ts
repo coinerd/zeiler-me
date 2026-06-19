@@ -1,3 +1,12 @@
+const basePath = process.env.BASE_PATH || '';
+
+function withBasePath(path: string): string {
+  if (path.startsWith('/') && !path.startsWith('//')) {
+    return `${basePath}${path}`;
+  }
+  return path;
+}
+
 export function createArticleJsonLd(article: {
   title: string;
   description: string;
@@ -24,7 +33,7 @@ export function createArticleJsonLd(article: {
       '@type': 'WebPage',
       '@id': `https://zeiler.me/${article.collection}/${article.slug}`,
     },
-    image: article.image || 'https://zeiler.me/images/og/default.png',
+    image: article.image ? withBasePath(article.image) : 'https://zeiler.me/images/og/default.png',
     publisher: {
       '@type': 'Organization',
       name: 'ZEILER.me',

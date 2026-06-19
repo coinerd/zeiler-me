@@ -37,13 +37,15 @@ export function generatePageMetadata({
       locale: siteConfig.locale,
       type: type === 'article' ? 'article' : 'website',
       ...(publishedTime && { publishedTime }),
-      ...(image && { images: [{ url: image }] }),
+      ...(image && { images: [{ url: image.startsWith('/') ? `${process.env.BASE_PATH || ''}${image}` : image }] }),
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} | ${siteConfig.name}`,
       description,
-      ...(image && { images: [image] }),
+      ...(image && {
+        images: [image.startsWith('/') ? `${process.env.BASE_PATH || ''}${image}` : image],
+      }),
     },
   };
 }

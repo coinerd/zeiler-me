@@ -6,6 +6,16 @@
  */
 import type { MDXComponents } from 'mdx/types';
 
+const basePath = process.env.BASE_PATH || '';
+
+function withBasePath(path: string | undefined): string | undefined {
+  if (!path) return path;
+  if (path.startsWith('/') && !path.startsWith('//')) {
+    return `${basePath}${path}`;
+  }
+  return path;
+}
+
 export const mdxComponents: MDXComponents = {
   // Headings
   h1: ({ children, ...props }) => (
@@ -34,7 +44,7 @@ export const mdxComponents: MDXComponents = {
   // Links
   a: ({ children, href, ...props }) => (
     <a
-      href={href}
+      href={withBasePath(href as string)}
       className="text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
       target={href?.startsWith('http') ? '_blank' : undefined}
       rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -122,7 +132,7 @@ export const mdxComponents: MDXComponents = {
       return (
         <figure className={`float-image float-image-${direction}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={alt?.replace(/^[<>]/, '') || ''} loading="lazy" {...props} />
+          <img src={withBasePath(src as string)} alt={alt?.replace(/^[<>]/, '') || ''} loading="lazy" {...props} />
           {alt && alt.length > 1 && <figcaption>{alt.replace(/^[<>]/, '')}</figcaption>}
         </figure>
       );
@@ -133,7 +143,7 @@ export const mdxComponents: MDXComponents = {
         <figure className="full-bleed-image relative -mx-[calc((100vw-100%)/2)] my-12 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={src}
+            src={withBasePath(src as string)}
             alt={alt?.replace(/^[!*]/, '') || ''}
             className="cinematic-scale h-auto max-h-[70vh] w-full object-cover"
             loading="lazy"
@@ -155,7 +165,7 @@ export const mdxComponents: MDXComponents = {
       return (
         <figure className="gallery-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={alt?.replace(/^\*/, '') || ''} loading="lazy" {...props} />
+          <img src={withBasePath(src as string)} alt={alt?.replace(/^\*/, '') || ''} loading="lazy" {...props} />
           {alt && alt.length > 1 && <figcaption>{alt.replace(/^\*/, '')}</figcaption>}
         </figure>
       );
@@ -167,7 +177,7 @@ export const mdxComponents: MDXComponents = {
         <div className="relative overflow-hidden rounded-lg shadow-md">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={src}
+            src={withBasePath(src as string)}
             alt={alt || ''}
             className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.02]"
             loading="lazy"
